@@ -1,0 +1,48 @@
+@import "utils/libs";
+@import "utils/variables";
+@import "utils/mixins";
+@import "utils/fonts";
+@import "utils/reset";
+@import "utils/font-awesome/fontawesome.scss";
+@import "utils/font-awesome/solid.scss";
+@import "utils/font-awesome/brands.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: montserrat;
+  section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+
+    h1 {
+      font-size: 36px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      button {
+        font-size: 20px;
+        width: 70%;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        i {
+          margin: 5px;
+        }
+      }
+    }
+  }
+}
+
+.add-color {
+  background-color: $success-color;
+  color: $neutral-secondary;
+}

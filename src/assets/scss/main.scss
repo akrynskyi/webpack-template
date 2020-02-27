@@ -3,9 +3,9 @@
 @import "utils/mixins";
 @import "utils/fonts";
 @import "utils/reset";
-@import "utils/font-awesome/fontawesome.scss";
-@import "utils/font-awesome/solid.scss";
-@import "utils/font-awesome/brands.scss";
+// @import "utils/font-awesome/fontawesome.scss";
+// @import "utils/font-awesome/solid.scss";
+// @import "utils/font-awesome/brands.scss";
 
 * {
   margin: 0;
@@ -15,34 +15,58 @@
 
 body {
   font-family: montserrat;
-  section {
+  .header {
+    background-color: #000;
+    // padding: 20px 0px;
+    height: 15vh;
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 100vh;
-    color: #333;
-
-    h1 {
-      font-size: 36px;
+    justify-content: center;
+    &-nav {
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      button {
-        font-size: 20px;
-        width: 70%;
-        margin-top: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        i {
-          margin: 5px;
+      justify-content: center;
+      &__link {
+        color: $default-color;
+        text-transform: uppercase;
+        margin-right: 40px;
+        padding: 10px 25px;
+        border: 1px solid transparent;
+        transition: border 0.2s cubic-bezier(0.35, 0.04, 0.76, 0.96);
+        &:last-child {
+          margin-right: 0px;
+        }
+        &:hover {
+          border: 1px solid $default-color;
         }
       }
     }
   }
+  .section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+    // color: #000;
+    h1 {
+      font-size: 48px;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 50px;
+    }
+    button {
+      color: $default-color;
+      font-size: 20px;
+      padding: 10px 20px;
+      background-color: $neutral-placeholder;
+    }
+    p {
+      margin-top: 20px;
+    }
+  }
 }
 
-.add-color {
+.add-background {
   background-color: $success-color;
-  color: $neutral-secondary;
+  color: $default-color;
 }
